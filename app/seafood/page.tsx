@@ -9,29 +9,29 @@ interface Meal {
   strArea: string;
 }
 const Page = async () => {
-  let response = await fetch(
+  const response = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=fish"
   );
-  let data = await response.json();
-  let seafood: Meal[] = data.meals;
+  const data = await response.json();
+  const seafood: Meal[] = data.meals;
 
-  let response2 = await fetch(
+  const response2 = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=salmon"
   );
-  let data2 = await response2.json();
-  let seafood2: Meal[] = data2.meals;
+  const data2 = await response2.json();
+  const seafood2: Meal[] = data2.meals;
 
-  let response3 = await fetch(
+  const response3 = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=prawn"
   );
-  let data3 = await response3.json();
-  let seafood3: Meal[] = data3.meals;
+  const data3 = await response3.json();
+  const seafood3: Meal[] = data3.meals;
   return (
     <div>
       <h1 className="text-8xl text-center font-dancing mb-4 mt-4">Seafood</h1>
       {seafood.map((food) => {
         return (
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
+          <div className="py-8 flex flex-wrap md:flex-nowrap" key={food.idMeal}>
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <Image
                 src={food.strMealThumb}
@@ -66,7 +66,7 @@ const Page = async () => {
       })}
       {seafood2.map((food) => {
         return (
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
+          <div className="py-8 flex flex-wrap md:flex-nowrap" key={food.idMeal}>
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <Image
                 src={food.strMealThumb}
@@ -101,7 +101,7 @@ const Page = async () => {
       })}
       {seafood3.map((food) => {
         return (
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
+          <div className="py-8 flex flex-wrap md:flex-nowrap" key={food.idMeal}>
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <Image
                 src={food.strMealThumb}
