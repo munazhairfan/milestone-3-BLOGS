@@ -1,8 +1,6 @@
-"use client"
 import React from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
-import CommentSection from '../comments/page'
 
 interface Meal {
   idMeal: string;
@@ -33,10 +31,10 @@ interface Meal {
 }
 
 const Page = async() => {
-  let {slug} = useParams();
+  const {slug} = useParams();
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${slug}`)
-  let data = await response.json();
-  let food:Meal[] = data.meals;
+  const data = await response.json();
+  const food:Meal[] = data.meals;
 
   return (
     <div>
