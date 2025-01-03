@@ -10,29 +10,29 @@ interface Meal {
   strArea: string;
 }
 const Page = async () => {
-  let response = await fetch(
+  const response = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s="
   );
-  let data = await response.json();
-  let myfood: Meal[] = data.meals;
+  const data = await response.json();
+  const myfood: Meal[] = data.meals;
 
-  let response2 = await fetch(
+  const response2 = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=pasta"
   );
-  let data2 = await response2.json();
-  let myfood2: Meal[] = data2.meals;
+  const data2 = await response2.json();
+  const myfood2: Meal[] = data2.meals;
 
-  let response3 = await fetch(
+  const response3 = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=banana"
   );
-  let data3 = await response3.json();
-  let myfood3: Meal[] = data3.meals;
+  const data3 = await response3.json();
+  const myfood3: Meal[] = data3.meals;
 
-  let response4 = await fetch(
+  const response4 = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=shrimp"
   );
-  let data4 = await response4.json();
-  let myfood4: Meal[] = data4.meals;
+  const data4 = await response4.json();
+  const myfood4: Meal[] = data4.meals;
 
   return (
     <div>
