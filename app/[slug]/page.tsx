@@ -29,21 +29,13 @@ interface Meal {
   strIngredient20: string | null;
 }
 
-interface PageProps {
-  food: Meal | null;
-}
-
 async function getMealData(slug: string): Promise<Meal | null> {
-  try {
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${slug}`);
     if (!response.ok) {
       return null; // If response is not ok, return null
     }
     const data = await response.json();
     return data.meals ? data.meals[0] : null;
-  } catch (error) {
-    return null; // Return null in case of an error
-  }
 }
 
 const MealPage = async ({ params }: { params: { slug: string } }) => {
