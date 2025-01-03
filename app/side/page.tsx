@@ -10,18 +10,18 @@ interface Meal {
   strArea: string;
 }
 const Page = async () => {
-  let response = await fetch(
+  const response = await fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=soup"
   );
-  let data = await response.json();
-  let side: Meal[] = data.meals;
+  const data = await response.json();
+  const side: Meal[] = data.meals;
 
   return (
     <div>
       <h1 className="text-8xl text-center font-dancing mb-4 mt-4">Side Dish</h1>
       {side.map((food) => {
         return (
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
+          <div className="py-8 flex flex-wrap md:flex-nowrap" key={food.idMeal}>
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <Image
                 src={food.strMealThumb}
