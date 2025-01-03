@@ -8,7 +8,7 @@ interface Comment {
 }
 
 // In-memory mock database for simplicity
-let comments: Comment[] = [];
+const comments: Comment[] = [];
 
 export async function GET() {
   // Respond with the list of comments
