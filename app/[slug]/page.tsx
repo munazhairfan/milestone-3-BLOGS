@@ -41,7 +41,7 @@ const Page = async() => {
       {
         food.map((myfood)=>{
           return(
-            <section className="text-gray-600 body-font">
+            <section className="text-gray-600 body-font" key={myfood.idMeal}>
   <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
   <Image
         className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
