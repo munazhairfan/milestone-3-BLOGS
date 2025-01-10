@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily:{
         'dancing' : "Dancing Script",
+<<<<<<< HEAD
       },
       screens: {
         'xs': '320px', 
@@ -22,6 +23,8 @@ const config: Config = {
         'lg': '1024px', 
         'xl': '1280px',
         '2xl': '1536px',
+=======
+>>>>>>> 6865bc71177856998400ac204b551de6417b1b0a
       }
     },
   },
