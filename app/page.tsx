@@ -38,14 +38,9 @@ const Page = async () => {
     <div>
       <Image src={'/hero-image.jpg'} alt='hero images' width={2000} height={500}
       className='border-b-8 border-dashed border-black'></Image>
-<<<<<<< HEAD
       <h4 className="xl:text-8xl text-center font-dancing lg:mb-4 lg:mt-28
       xs:text-2xl xs:my-5 md:text-5xl">Recently Updated</h4>
       <div className='flex w-full justify-around xs:flex-col xs:px-14 md:flex-row md:p-0'>
-=======
-      <h4 className="text-8xl text-center font-dancing mb-4 mt-28">Recently Updated</h4>
-      <div className='flex w-full justify-around'>
->>>>>>> 6865bc71177856998400ac204b551de6417b1b0a
       {
         myfood.slice(0,3).map((food)=>{
           return(
@@ -61,14 +56,9 @@ const Page = async () => {
         })
       }
     </div>
-<<<<<<< HEAD
     <h4 className="xl:text-8xl text-center font-dancing lg:mb-4 lg:mt-28
     xs:text-2xl xs:py-5 md:text-5xl">Find Recipes for....</h4>
     <div className='flex w-full justify-around xs:flex-col xs:px-12 md:flex-row md:p-0'>
-=======
-    <h4 className="text-8xl text-center font-dancing mb-4 mt-28">Find Recipes for....</h4>
-    <div className='flex w-full justify-around'>
->>>>>>> 6865bc71177856998400ac204b551de6417b1b0a
       {
         myfood2.slice(0,3).map((food)=>{
           return(
@@ -77,12 +67,8 @@ const Page = async () => {
         <div className="bg-gray-100 p-6 rounded-full">
           <Image src={food.strMealThumb} alt={food.strMeal} width={330} height={300} className="rounded-full"></Image>
         </div>
-<<<<<<< HEAD
           <h2 className="text-3xl text-center mt-4 font-serif text-gray-900 font-medium title-font mb-4
           ">{food.strMeal}</h2>
-=======
-          <h2 className="text-3xl text-center mt-4 font-serif text-gray-900 font-medium title-font mb-4">{food.strMeal}</h2>
->>>>>>> 6865bc71177856998400ac204b551de6417b1b0a
       </Link> 
       </div> 
           )
